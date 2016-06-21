@@ -1,0 +1,27 @@
+<div class="postGuestbook">
+  <form name="guestBookMessage" novalidate>
+    <h3>Sign the Guestbook</h3>
+    <div id="guestbookPost" class="formGroup guestbookForm">
+    <ul>
+      <li>
+        <label>Phone Number: </label>
+        <input type="text" name="phone" class="formInput" placeholder="Phone" ng-model="gbMsg.phone">       
+      </li>
+      <li>
+        <label>Message: </label>
+        <textarea name="message" class="formTextarea" placeholder="Message" ng-model="gbMsg.message"></textarea>
+      </li>
+      <li>
+         <input type="button" value="Submit" id="submit" ng-click="postMsg()">
+      </li>
+    </ul>
+  </form>
+</div>
+
+<div class="thankYou">
+  {{thankYou}}
+</div>
+
+<div class="errorMsg">
+  {{errorMsg}}
+</div>

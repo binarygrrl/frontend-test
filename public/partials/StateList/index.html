@@ -1,0 +1,12 @@
+<section class="statesList">
+	<div class="search"> 
+		<h1>US States List</h1>
+		<!-- <label>Search by Abbreviation: </label>
+		<input ng-model="stateQuery.abbreviation" placeholder="Search for a state abbreviation" autofocus> -->
+	</div>
+	<ul class="stateList">
+		<li class="state list" ng-repeat="state in states"> <!--  | filter: stateQuery"> -->
+			<a href="#/stateList/:{{state}}"><h3>{{state}}</h3></a>
+		</li>
+	</ul>
+</section>

@@ -1,0 +1,26 @@
+<section class="guestbook">
+    <h1>State Search Guestbook</h1>
+   <div class="search"> 
+    <label>Search Messages: </label>
+    <input ng-model="messageQuery" placeholder="Search for a message" autofocus>
+  </div> 
+
+  <ul class="guestbookList">
+    <li class="guestbookMsg list" ng-repeat="message in messages | filter: messageQuery" >
+      <ul>
+        <li class="username">
+          <label>Username:<label>
+          <span>{{message.user}}</span>
+        </li>
+        <li class="phone">
+          <label>Phone Number:<label>
+          <span>{{message.phone}}</span>
+        </li>
+        <li class="message">
+          <label>Message:<label>
+          <span>{{message.message}}</span>
+        </li>  
+      </ul>
+    </li>
+  </ul>
+</section>
